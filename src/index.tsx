@@ -10,6 +10,7 @@ import {
   RouterProvider,
 } from "react-router-dom";
 import { Login } from './pages/Login';
+import { Error } from './pages/Error';
 
 const root = createRoot(document.getElementById('root')!);
 
@@ -17,6 +18,7 @@ const router = createBrowserRouter([
   {
     path: "/",
     element: <App />,
+    errorElement: <Error />
   },
   {
     path: "/auth/login",
