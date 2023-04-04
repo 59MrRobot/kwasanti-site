@@ -1,6 +1,8 @@
 .login {
   height: 100vh;
 
+  background-color: #f0f0f0;
+
   &__wrapper {
     height: 100%;
 
@@ -34,6 +36,8 @@
 
     border-radius: 8px;
     border: 1px solid grey;
+
+    background-color: #fff;
   }
 
   &__input {

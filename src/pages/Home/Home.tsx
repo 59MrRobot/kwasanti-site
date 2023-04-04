@@ -12,8 +12,10 @@ export const Home: React.FC = React.memo(
     }
 
     return (
-      <div>
-        <button onClick={handleClick}>logout</button>
+      <div className="home">
+        <div className="home__wrapper">
+          HOME
+        </div>
       </div>
     )
   }

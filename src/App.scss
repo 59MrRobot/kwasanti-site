@@ -1,0 +1,15 @@
+.app {
+  height: 100vh;
+
+  &__wrapper {
+    height: 100%;
+  }
+
+  &__container {
+    height: 100%;
+
+    display: flex;
+
+    background-color: #f0f0f0;
+  }
+}
