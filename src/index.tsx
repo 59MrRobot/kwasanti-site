@@ -6,7 +6,7 @@ import { Provider } from "react-redux";
 import { store, persistor } from "./redux/store";
 import { PersistGate } from "redux-persist/integration/react";
 import {
-  createBrowserRouter,
+  createHashRouter,
   RouterProvider,
 } from "react-router-dom";
 import { Login } from './pages/Login';
@@ -14,7 +14,7 @@ import { Error } from './pages/Error';
 
 const root = createRoot(document.getElementById('root')!);
 
-const router = createBrowserRouter([
+const router = createHashRouter([
   {
     path: "/",
     element: <App />,
