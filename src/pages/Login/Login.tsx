@@ -6,6 +6,7 @@ import VisibilityOffIcon from '@mui/icons-material/VisibilityOff';
 import { useDispatch, useSelector } from 'react-redux';
 import { login } from '../../redux/apiCalls';
 import { useNavigate } from 'react-router-dom';
+import { Loader } from '../../components/Loader';
 
 export const Login: React.FC = React.memo(
   () => {
@@ -14,6 +15,7 @@ export const Login: React.FC = React.memo(
     const [showPassword, setShowPassword] = useState(false);
     const dispatch = useDispatch();
     const user = useSelector((state: any) => state.user.currentUser);
+    const isFetching = useSelector((state: any) => state.user.isFetching);
     const navigate = useNavigate();
 
     const handleClick = (event: React.FormEvent<HTMLFormElement>) => {
@@ -64,8 +66,11 @@ export const Login: React.FC = React.memo(
               </button>
             </div>
 
-
             <button className="button">LOGIN</button>
+            
+            <div style={{ visibility: isFetching ? 'visible' : 'hidden'}}>
+              <Loader />
+            </div>
           </form>
         </div>
       </div>

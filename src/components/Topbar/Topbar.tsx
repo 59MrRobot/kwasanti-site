@@ -6,6 +6,7 @@ import { logout } from '../../redux/userRedux';
 import { useNavigate } from 'react-router-dom';
 import LogoutIcon from '@mui/icons-material/Logout';
 import { Tooltip } from '@mui/material';
+import { Link } from 'react-router-dom';
 
 export const Topbar: React.FC = React.memo(
   () => {
@@ -21,14 +22,10 @@ export const Topbar: React.FC = React.memo(
     return (
       <div className="topbar">
         <div className="topbar__wrapper">
-          <h1 className="topbar__title">KwaSanti District</h1>
+          <Link to="/" style={{ textDecoration: "none" }}>
+            <h1 className="topbar__title">KwaSanti District</h1>
+          </Link>
 
-          {/* <button
-            className="button topbar__button"
-            onClick={handleClick}
-          >
-            LOGOUT
-          </button> */}
           <button className="topbar__button" onClick={handleClick}>
             <Tooltip title="Logout">
               <LogoutIcon />
