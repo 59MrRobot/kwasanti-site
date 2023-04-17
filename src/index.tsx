@@ -11,6 +11,8 @@ import {
 } from "react-router-dom";
 import { Login } from './pages/Login';
 import { Error } from './pages/Error';
+import School from './pages/School/School';
+import { Home } from './pages/Home';
 
 const root = createRoot(document.getElementById('root')!);
 
@@ -18,7 +20,17 @@ const router = createHashRouter([
   {
     path: "/",
     element: <App />,
-    errorElement: <Error />
+    errorElement: <Error />,
+    children: [
+      {
+        path: "/school/:id",
+        element: <School />
+      },
+      {
+        index: true,
+        element: <Home />
+      }
+    ]
   },
   {
     path: "/auth/login",
