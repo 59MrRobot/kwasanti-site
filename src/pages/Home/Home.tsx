@@ -3,6 +3,7 @@ import './Home.scss';
 import '../../styles/button.scss';
 import { useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
+import cn from 'classnames';
 
 export const Home: React.FC = React.memo(
   () => {
@@ -10,12 +11,24 @@ export const Home: React.FC = React.memo(
 
     return (
       <div className="home">
-        <div className="home__wrapper">
-          <h2 className="home__title">
-            Welcome, Principal {user?.fullName.split(" ")[1]}
+        <div className={cn(
+            'home__wrapper',
+            {'home__wrapper--admin': user.isAdmin},
+            {'home__wrapper--user': !user.isAdmin},
+          )}>
+          <h2 className={cn(
+            'home__title',
+            {'home__title--admin': user.isAdmin},
+            {'home__title--user': !user.isAdmin},
+          )}>
+            Welcome, Principal {user?.fullName.split(" ")[1] || "User"}
           </h2>
 
-          <div className="home__container">
+          <div className={cn(
+            'home__container',
+            {'home__container--admin': user.isAdmin},
+            {'home__container--user': !user.isAdmin},
+          )}>
             <p className="home__school">Northwood School</p>
 
             <Link to="/school/:id" style={{ textDecoration: "none" }}>
