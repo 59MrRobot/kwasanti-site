@@ -1,20 +1,19 @@
 import React from 'react';
 import './Home.scss';
-import { useDispatch } from 'react-redux';
-import { logout } from '../../redux/userRedux';
+import { useSelector } from 'react-redux';
 
 export const Home: React.FC = React.memo(
   () => {
-    const dispatch = useDispatch();
-
-    const handleClick = () => {
-      dispatch(logout());
-    }
+    const user: User = useSelector((state: State) => state.user.currentUser);
 
     return (
       <div className="home">
         <div className="home__wrapper">
-          HOME
+          <h2>Welcome, Principal {user?.fullName.split(" ")[1]}</h2>
+
+          <div>
+            <p>School: Northwood</p>
+          </div>
         </div>
       </div>
     )

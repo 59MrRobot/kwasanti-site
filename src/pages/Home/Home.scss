@@ -1,13 +1,9 @@
 .home {
-  height: 100%;
-
   flex: 4;
 
   padding: 8px 16px;
 
   &__wrapper {
-    height: 100%;
-
     padding: 16px 24px;
 
     display: flex;
@@ -16,6 +12,7 @@
 
     border-radius: 8px;
 
-    background-color: #fff;
+    // background-color: #fff;
+    background-color: #d9e7ff;
   }
 }

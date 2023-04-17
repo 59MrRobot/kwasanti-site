@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import './Login.scss';
+import '../../styles/button.scss';
 import VisibilityIcon from '@mui/icons-material/Visibility';
 import VisibilityOffIcon from '@mui/icons-material/VisibilityOff';
 import { useDispatch, useSelector } from 'react-redux';
@@ -52,19 +53,19 @@ export const Login: React.FC = React.memo(
                 onChange={(event) => setPassword(event.target.value)}
               />
 
-              <div
+              <button
                 className="login__icon"
                 onClick={() => setShowPassword((prev) => !prev)}
               >
                 {showPassword
-                  ? (<VisibilityOffIcon />)
-                  : (<VisibilityIcon />)
+                  ? (<VisibilityOffIcon fontSize='small' />)
+                  : (<VisibilityIcon fontSize='small' />)
                 }
-              </div>
+              </button>
             </div>
 
 
-            <button className="login__button">LOGIN</button>
+            <button className="button">LOGIN</button>
           </form>
         </div>
       </div>
