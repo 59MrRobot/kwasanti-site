@@ -13,21 +13,21 @@ export const Home: React.FC = React.memo(
       <div className="home">
         <div className={cn(
             'home__wrapper',
-            {'home__wrapper--admin': user?.isAdmin},
-            {'home__wrapper--user': !user?.isAdmin},
+            {'home__wrapper--admin': user && user.isAdmin},
+            {'home__wrapper--user': user && !user.isAdmin},
           )}>
           <h2 className={cn(
             'home__title',
-            {'home__title--admin': user?.isAdmin},
-            {'home__title--user': !user?.isAdmin},
+            {'home__title--admin': user && user.isAdmin},
+            {'home__title--user': user && !user.isAdmin},
           )}>
             Welcome, Principal {user?.fullName.split(" ")[1] || "User"}
           </h2>
 
           <div className={cn(
             'home__container',
-            {'home__container--admin': user?.isAdmin},
-            {'home__container--user': !user?.isAdmin},
+            {'home__container--admin': user && user.isAdmin},
+            {'home__container--user': user && !user.isAdmin},
           )}>
             <p className="home__school">Northwood School</p>
 
