@@ -31,7 +31,7 @@ const App: React.FC = () => {
         <Topbar />
 
         <div className="app__container">
-          {user.isAdmin && <Sidebar />}
+          {user?.isAdmin && <Sidebar />}
 
           <Outlet />
         </div>
