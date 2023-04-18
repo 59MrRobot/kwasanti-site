@@ -13,7 +13,9 @@ const App: React.FC = () => {
 
   useEffect(() => {
     if (!user) {
-      navigate("/auth/login");
+      setTimeout(() => {
+        navigate("/auth/login");
+      }, 0);
     }
   }, [navigate, user]);
 
