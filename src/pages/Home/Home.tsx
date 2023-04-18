@@ -31,7 +31,7 @@ export const Home: React.FC = React.memo(
           )}>
             <p className="home__school">Northwood School</p>
 
-            <Link to="/school/:id" style={{ textDecoration: "none" }}>
+            <Link to="/school/id" style={{ textDecoration: "none" }}>
               <button className="button">View School Information</button>
             </Link>
           </div>
