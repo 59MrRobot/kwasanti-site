@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/kwasanti-site/static/css/main.27da83e7.css",
-    "main.js": "/kwasanti-site/static/js/main.4d0ac53b.js",
+    "main.js": "/kwasanti-site/static/js/main.cda8dcca.js",
     "index.html": "/kwasanti-site/index.html",
     "main.27da83e7.css.map": "/kwasanti-site/static/css/main.27da83e7.css.map",
-    "main.4d0ac53b.js.map": "/kwasanti-site/static/js/main.4d0ac53b.js.map"
+    "main.cda8dcca.js.map": "/kwasanti-site/static/js/main.cda8dcca.js.map"
   },
   "entrypoints": [
     "static/css/main.27da83e7.css",
-    "static/js/main.4d0ac53b.js"
+    "static/js/main.cda8dcca.js"
   ]
 }
