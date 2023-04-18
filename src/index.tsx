@@ -11,7 +11,7 @@ import {
 } from "react-router-dom";
 import { Login } from './pages/Login';
 import { Error } from './pages/Error';
-import School from './pages/School/School';
+import { School } from './pages/School';
 import { Home } from './pages/Home';
 
 const root = createRoot(document.getElementById('root')!);
