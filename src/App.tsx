@@ -26,12 +26,12 @@ const App: React.FC = () => {
   }, [location.pathname]);
 
   return (
-    <div className={cn('app', {'app--user': !user?.isAdmin})}>
+    <div className={cn('app', {'app--user': user && !user.isAdmin})}>
       <div className="app__wrapper">
         <Topbar />
 
         <div className="app__container">
-          {user?.isAdmin && <Sidebar />}
+          {(user && user.isAdmin) && <Sidebar />}
 
           <Outlet />
         </div>
