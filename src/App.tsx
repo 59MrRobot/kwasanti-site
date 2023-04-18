@@ -22,7 +22,7 @@ const App: React.FC = () => {
   useEffect(() => {
     if (location.pathname === "/") {
       document.title = "KwaSanti District";
-    } else if (location.pathname === "/school/:id") {
+    } else if (location.pathname === "/school/id") {
       document.title = "Northwood School";
     }
   }, [location.pathname]);

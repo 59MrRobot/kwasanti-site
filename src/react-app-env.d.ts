@@ -6,6 +6,9 @@ interface State {
     isFetching: boolean;
     error: boolean;
   };
+  setting: {
+    showUpdate: boolean;
+  }
 }
 
 interface User {

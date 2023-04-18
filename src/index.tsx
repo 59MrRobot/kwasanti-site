@@ -23,19 +23,20 @@ const router = createHashRouter([
     errorElement: <Error />,
     children: [
       {
-        path: "/school/:id",
-        element: <School />
-      },
-      {
         index: true,
         element: <Home />
-      }
+      },
+      {
+        path: "/school/:id",
+        element: <School />,
+      },
     ]
   },
   {
     path: "/auth/login",
     element: <Login />,
   }
+
 ]);
 
 root.render(

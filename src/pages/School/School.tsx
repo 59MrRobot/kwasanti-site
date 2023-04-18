@@ -1,10 +1,13 @@
 import React from 'react';
 import './School.scss';
+import '../../styles/button.scss';
 import PersonIcon from '@mui/icons-material/Person';
 import EmailIcon from '@mui/icons-material/Email';
 import PhoneIcon from '@mui/icons-material/Phone';
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import cn from 'classnames';
+import { Update } from '../Update';
+import { updateShowUpdate } from '../../redux/settingRedux';
 
 export const School: React.FC = React.memo(
   () => {
@@ -12,6 +15,12 @@ export const School: React.FC = React.memo(
     const principal: User = user.isAdmin ? (user) : user;
     const date = new Date();
     const today = String(date).split(" ").slice(0, 4).join(" ");
+    const showUpdate: Boolean = useSelector((state: State) => state.setting.showUpdate);
+    const dispatch = useDispatch();
+
+    const handleClick = () => {
+      dispatch(updateShowUpdate(true));
+    }
 
     return (
       <div className="school">
@@ -67,7 +76,14 @@ export const School: React.FC = React.memo(
               Today's Attendance ({today}):
               <span className="school__value">639</span>
             </p>
+
+         
+            <button className="button" onClick={() => handleClick()}>
+              UPDATE
+            </button>
           </div>
+
+          {showUpdate && <Update />}
         </div>
       </div>
     )
